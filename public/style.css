@@ -1,0 +1,230 @@
+*{font-weight:lighter;}
+html, body {
+  font-family:'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  background-image:url('/images/background.png');
+  /*background: -webkit-linear-gradient(145deg, #1A2980 10%, #26D0CE 90%);
+  background:    -moz-linear-gradient(145deg, #1A2980 10%, #26D0CE 90%);
+  background:     -ms-linear-gradient(145deg, #1A2980 10%, #26D0CE 90%);
+  background:      -o-linear-gradient(145deg, #1A2980 10%, #26D0CE 90%);
+  background:         linear-gradient(145deg, #1A2980 10%, #26D0CE 90%);*/
+}
+a:focus, a:hover {
+  outline: none;
+  text-decoration: none;
+}
+.panel {
+  border: none;
+  box-shadow: none;
+}
+.panel-group {
+  margin-bottom:0px;
+}
+#top-nav {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+  background: black;
+  z-index: 1000;
+}
+#top-nav .back {
+  position: absolute;
+  top: 1px;
+  left: 0%;
+}
+#top-nav .logo {
+  position: absolute;
+  top: 5px;
+  left: 41%;
+}
+#container {
+  color: #fff;
+  height: 100%;
+}
+.splash-box {
+  width: 85%;
+  height: 91%;
+  margin: auto;
+  margin-top: 7%;
+  position:relative;
+}
+.thin-box {
+  height: 100%;
+  border: 1px solid #fff;
+}
+.simon-logo {
+  position: absolute;
+  background-image:url('/images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  top:45%;
+  left:35%;
+  width: 100px;
+  height: 43px;
+}
+#map-canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+#map-canvas.initial {
+  visibility: hidden;
+}
+#map-canvas.rendered {
+  visibility: visible;
+}
+.arrow {
+  position: absolute;
+  top: 61%;
+  left: 37%;
+  outline:none;
+  border:none;
+  visibility: hidden;
+}
+.arrow.ready {
+  visibility: visible;
+}
+.arrow:focus {
+  outline: 0;
+}
+@-webkit-keyframes goldSVGGlow {
+  from { fill: #FFD740; -webkit-box-shadow: 0 0 9px #FFD740; }
+  50% { fill: #ffd333; -webkit-box-shadow: 0 0 18px #ffd333; }
+  to { fill: #FFD740; -webkit-box-shadow: 0 0 9px #FFD740; }
+}
+@-webkit-keyframes goldGlow {
+  from { background-color: #FFD740; -webkit-box-shadow: 0 0 9px #FFD740; }
+  50% { background-color: #ffd333; -webkit-box-shadow: 0 0 18px #ffd333; }
+  to { background-color: #FFD740; -webkit-box-shadow: 0 0 9px #FFD740; }
+}
+.arrow svg path{
+  -webkit-animation-name: goldSVGGlow;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+.reward {
+  height:10px;
+  width:10px;
+  border-radius:50%;
+  position: absolute;
+  -webkit-animation-name: goldGlow;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+}
+.reward-label {
+  color: black;
+  font-weight: normal;
+  position: absolute;
+  left: 14px;
+}
+#reward-detail {
+  border-top: 2px solid black;
+  background: #fff;
+  position: absolute;
+  top: 37%;
+  height: 63%;
+  width:100%;
+  overflow-y:scroll;
+}
+#reward-detail.hide {
+  visibility: hidden;
+}
+#reward-detail.show {
+  visibility: visible;
+}
+#detail-container {
+  height:100%;
+  margin: 20px;
+}
+.phone {
+  position:absolute;
+  top:219px;
+  right:11px;
+  z-index: 9999;
+}
+#detail-container .logo {
+  width:85%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#detail-container .my-rewards {
+  width:100%;
+  color:black;
+  margin-bottom:20px;
+}
+#detail-container .reward-icon {
+  background-color:#50b19f;
+  height:45px;
+  width:45px;
+  border-radius:50%;
+}
+#detail-container .panel-group .panel-heading {
+  background-color:#fff;
+}
+#detail-container .reward-list-item {
+  margin-bottom: 10px;
+  width:100%;
+}
+#detail-container .reward-list-item p {
+  display: inline;
+}
+#detail-container .store-rewards {
+  width: 336px;
+}
+.store-reward-item {
+  width: 100%;
+  color: black;
+  position: relative;
+}
+.store-reward-item .block {
+  height: 168px;
+}
+.store-reward-item p.desc{
+  font-family: 'Playfair Display', serif;
+  font-style:italic;
+  color: black;
+}
+.store-reward-item .left,.right {
+  width:168px;
+  display:inline-block;
+}
+.store-reward-item .text {
+  width: 164px;
+  padding:0 5px;
+  text-align:center;
+}
+.store-reward-item .bottom.text {
+  width: 100%;
+  padding:5px 5px;
+}
+.store-reward-item .top, .bottom {
+  width:100%;
+  height:100%;
+}
+.store-reward-item img {
+  width:168px;
+}
+.store-reward-item .top img {
+  width:100%;
+}
+.text .desc {
+  /*text-align:center;*/
+}
+.text .prices p{
+  display:inline-block;
+  padding: 0 3px;
+}
+.prices .norm {
+  text-decoration:line-through;
+}
+.prices .disc {
+  color:#E91E63;
+}
